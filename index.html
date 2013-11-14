@@ -6,8 +6,30 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Gandhi Institute for Technological Advancement</title>
     <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="js/main.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>
+	
     <link href="css/style.css" type="text/css" rel="stylesheet" />
+	<script>
+		 var cb = new ChildBrowser();
+		  
+		 document.addEventListener("deviceready", onDeviceReady, false);
+			function onDeviceReady() {
+				try {
+						window.plugins.childBrowser.onClose = closed;
+						window.plugins.childBrowser.showWebPage("http://www.phonegap.com", {
+							showLocationBar: false
+						});
+					}catch (err){
+						console.log(err);
+					}  
+			}
+			 
+			function closed()
+			{
+				navigator.app.exitApp();
+			}  
+		</script>
 </head>
 
 <body onload="onLoad()">
