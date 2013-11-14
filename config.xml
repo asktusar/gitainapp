@@ -14,7 +14,9 @@ Gandhi Institute of Technological Advancement
 Themingpress
 </author>
 
-<access origin="http://pixelmarketing.com" subdomains="true" />
+<gap:plugin name="com.phonegap.plugins.childbrowser" />
+
+<access origin="*" subdomains="true" />
 <preference name="splash-screen-duration" value="5000" />
 <gap:splash src="splash.png" />
 <icon src="icon.png" />
