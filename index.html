@@ -7,10 +7,10 @@
     <title>Gandhi Institute for Technological Advancement</title>
     <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
     <!--<script type="text/javascript" charset="utf-8" src="js/main.js"></script>-->
-    <!--<script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>
 	
     <link href="css/style.css" type="text/css" rel="stylesheet" />
-	<!--<script>
+	<script>
 		 var cb = new ChildBrowser();
 		  
 		 document.addEventListener("deviceready", onDeviceReady, false);
@@ -30,24 +30,7 @@
 			{
 				navigator.app.exitApp();
 			}
-		</script>-->
-		<script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-         var ref = window.open('http://staging.graphemetech.co.in/gita', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-         ref.addEventListener('exit', function() { alert(event.type); });
-    }
-
-    </script>
-
+		</script>
 </head>
 
 <body onload="onLoad()">

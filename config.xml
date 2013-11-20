@@ -14,8 +14,7 @@ Gandhi Institute of Technological Advancement
 Themingpress
 </author>
 
-<!--<gap:plugin name="com.phonegap.plugins.childbrowser" />-->
-<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+<gap:plugin name="com.phonegap.plugins.childbrowser" />
 
 <access origin="*" subdomains="true" />
 <preference name="splash-screen-duration" value="50000" />
