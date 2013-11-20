@@ -11,45 +11,6 @@
 	
     <link href="css/style.css" type="text/css" rel="stylesheet" />
 	<script>
-		function onDocumentReady() {
-                     if (document.addEventListener) {
-                         document.addEventListener('deviceready',                               onDeviceReady, false);
-                     } else {
-                         document.attachEvent('deviceready', onDeviceReady, false);
-                     }
-                }
-                function onChangeBrowserLocation(location) {
-                     if (location.indexOf('maps.google.com') != -1) {
-                         window.plugins.childBrowser.close();
-                     }
-                }
-                function onBrowserClose() {
-                     alert('child window closed');
-                }
-                function onDeviceReady() {
-                     //для некоторых платформ данный метод не определен.
-                     if (ChildBrowser.install) {
-                         ChildBrowser.install();
-                     }
-                     window.plugins.childBrowser.onLocationChange = onChangeBrowserLocation;
-                     window.plugins.childBrowser.onClose = onBrowserClose;
-                }
-                function openChildBrowser(url) {
-                     try {
-                         window.plugins.childBrowser.showWebPage(url);
-                     } catch (err) {
-                         alert(err);
-                     }
-                }
-                function openExternalBrowser(url) {
-                     try {
-                         window.plugins.childBrowser.openExternal(url);
-                     } catch (err) {
-                         alert(err);
-                     }
-                }
-		</script>
-		<!--<script>
 		 var cb = new ChildBrowser();
 		  
 		 document.addEventListener("deviceready", onDeviceReady, false);
@@ -68,12 +29,10 @@
 			{
 				navigator.app.exitApp();
 			}
-		</script>-->
+		</script>
 </head>
 
-<body onload="onDocumentReady()">
-                <button onclick="openChildBrowser('http://staging.graphemetech.co.in/gita');">Open Google in child window</button>
-                <button onclick="openExternalBrowser('http://staging.graphemetech.co.in/gita');">Open Google in default browser</button> 
+<body onload="onLoad()" bgcolor="red">
     
  
 
